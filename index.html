@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Felipe Macias</title>
+    <title>Portfolio Felipe Macías</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script defer src="https://unpkg.com/globe.gl"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-
     <nav>
         <ul>
             <li><a href="#">Experiencia</a></li>
@@ -17,7 +19,6 @@
         </ul>
     </nav>
 
- 
     <div class="profile-container">
         <img src="images/Felipe.jpg" alt="Foto de perfil" class="profile-image">
         
@@ -25,13 +26,40 @@
 
         <h1>Hey, soy Felipe</h1>
         <p class="description">
-            +2 años de experiencia. <span class="highlight">Tecnologo de Software y cursando la </span> de Medellín, Colombia. Especializado en el desarrollo de aplicaciones web únicas.
+            +2 años de experiencia. <span class="highlight">Tecnólogo de Software y cursando la </span> de Medellín, Colombia. Especializado en el desarrollo de aplicaciones web únicas.
         </p>
 
         <div class="profile-buttons">
             <a href="#" class="button contact-button">📧 Contáctame</a>
             <a href="#" class="button linkedin-button">🔗 LinkedIn</a>
         </div>
+    </div>
+
+
+    <div class="calculator-container">
+        <h2>Calculadora de Calorías</h2>
+        <form id="calorie-form">
+            <input type="number" id="weight" placeholder="Peso (kg)" required>
+            <input type="number" id="height" placeholder="Altura (cm)" required>
+            <input type="number" id="age" placeholder="Edad" required>
+            <select id="activity-level" required>
+                <option value="" disabled selected>Nivel de actividad</option>
+                <option value="1.2">Sedentario</option>
+                <option value="1.375">Actividad ligera</option>
+                <option value="1.55">Moderado</option>
+                <option value="1.725">Activo</option>
+                <option value="1.9">Muy activo</option>
+            </select>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="calorie-result"></p>
+    </div>
+
+  
+    <div class="globe-container">
+        <h2>Explora el Mundo</h2>
+        <div id="globe"></div>
+        <p id="country-time"></p>
     </div>
 </body>
 </html>
